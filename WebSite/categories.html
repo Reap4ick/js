@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Розетка</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/site.css" rel="stylesheet" />
+    <script src="/js/header.js"></script>
+</head>
+
+<body>
+    <script>
+        loadDOM("_header.html");
+    </script>
+    <div class="container">
+        <h1>Список категорій</h1>
+    </div>
+
+
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/axios.min.js"></script>
+
+    <!-- <script>
+        
+const url = "https://pd322.itstep.click/api/Category/CategoryGetAsync";
+        axios.get(url).then(resp => {
+            console.log(resp.data);
+            document.addEventListener('DOMContentLoaded', () => {
+                let categories = resp.data;
+                console.log("Fuck",categories);
+                for (let index = 0; index < categories.length; index++) {
+                    const containerDiv = document.createElement('div');
+                    containerDiv.className = 'container d-flex align-items-center justify-content-center';
+
+                    const cardDiv = document.createElement('div');
+                    cardDiv.className = 'card p-3';
+                    cardDiv.id = 'category-profile';
+
+                    const img = document.createElement('img');
+                    img.id = 'category-pic';
+                    img.src = categories[index].imagePath ? categories[index].imagePath : 'default-image.png';
+                    img.alt = 'Category Picture';
+                    img.className = 'card-img';
+                    img.style.minWidth = '375px';
+                    img.style.maxWidth = '375px';
+
+                    const cardBodyDiv = document.createElement('div');
+                    cardBodyDiv.className = 'card-body';
+
+                    const cardTitle = document.createElement('h2');
+                    cardTitle.className = 'card-title m-2 mb-3';
+                    cardTitle.textContent = categories[index].name;
+
+                    const descriptionP = document.createElement('p');
+                    descriptionP.className = 'card-text';
+                    descriptionP.innerHTML = `Description: <span id="category-description">${categories[index].description}</span>`;
+
+                    const idP = document.createElement('p');
+                    idP.className = 'card-text';
+                    idP.innerHTML = `Id: <span id="category-id">${categories[index].id}</span>`;
+
+                    cardBodyDiv.appendChild(cardTitle);
+                    cardBodyDiv.appendChild(descriptionP);
+                    cardBodyDiv.appendChild(idP);
+
+                    cardDiv.appendChild(img);
+                    cardDiv.appendChild(cardBodyDiv);
+
+                    containerDiv.appendChild(cardDiv);
+
+                    document.body.appendChild(containerDiv);
+                }
+            });
+        }).catch(error => {
+            console.error("Error fetching data:", error);
+        });
+    </script> -->
+
+</body>
+
+</html>
